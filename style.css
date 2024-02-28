@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Staatliches&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #BFD7E4;
+    color: #253B51;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+body::before {
+    content: '';
+
+    background: #293241;
+
+    height: 465px;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.page {
+    width: 750px;
+
+    margin: 100px auto;
+}
+
+/*Seção do header da página*/
+header {
+    text-align: center;
+}
+
+header h1,
+form div h1 {
+    font-family: 'Staatliches', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 30px;
+
+    color: white;
+}
+
+header p {
+    font-size: 16px;
+
+    color: white;
+}
+
+header img {
+    margin: 30px 0;
+}
+
+/*Seção do conteúdo principal/formulário*/
+form > div:nth-child(1)  {
+    background: #F67669;
+
+    border-radius: 15px 15px 0 0;
+
+    height: 144px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    background: white;
+
+    padding: 30px 64px 64px;
+
+    border-radius: 0 0 15px 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.fieldset-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+form fieldset {
+    border: none;
+}
+
+form fieldset div legend {
+    font-family: 'Staatliches', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #E6E6F0;
+
+    padding-bottom: 8px;
+    margin-bottom: 32px;
+}
+
+
+/*Seção de alteração dos inputs, select e textarea*/
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.input-wrapper label {
+    margin-bottom: 8px;
+}
+.input-wrapper label span {
+    color: #C1BCCC;
+
+    font-size: 12px;
+    line-height: 20px;
+
+    margin-left: 9px;
+}
+.input-wrapper label span:hover {
+    color: #5b595f;
+}
+
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea {
+    background: #FAFAFC;
+    color: #C1BCCC;
+
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+
+    height: 55px;
+
+    padding: 0 12px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+/*Para sumir com a seta do select*/
+.input-wrapper select {
+    appearance: none;
+}
+
+.input-wrapper textarea {
+    height: 165px;
+
+    padding: 12px 12px;
+}
+
+
+/*Alterações do checkbox*/
+.checkbox-wrapper {
+    position: relative;
+}
+
+.checkbox-wrapper input {
+    opacity: 0;
+
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+}
+
+.checkbox-wrapper label {
+    display: flex;
+    gap: 8px;
+}
+.checkbox-wrapper label::before {
+    content: '';
+
+    background: #FAFAFC;
+
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+
+    height: 24px;
+    width: 24px;
+
+    display: block;
+}
+
+.checkbox-wrapper input:checked + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+.checkbox-wrapper input:focus + label::before {
+    border: 2px solid #000000;
+}
+
+/*Container do nome e sobrenome*/
+.user-name {
+    display: flex;
+    gap: 22px;
+}
+
+/*Container da data e horário*/
+.date-hour {
+    display: flex;
+    gap: 10px;
+}
+
+.date-hour > .input-wrapper input:nth-child(1) {
+    width: 250px;
+}
+
+
+/*Botão*/
+footer button {
+    width: 100%;
+    color: white;
+
+    background: #F67669;
+
+    padding: 16px 0;
+    margin-top: 30px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: 'Staatliches', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+footer button:hover {
+    background: #f75c4a;
+}
